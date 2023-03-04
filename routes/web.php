@@ -24,5 +24,5 @@ Route::get('/blog/create/post', [PostsController::class,'create']); // prikazuje
 Route::post('/blog/create/post', [PostsController::class,'store']); // cuva kreirani post u bazu
 Route::get('/blog/{id}/edit', [PostsController::class,'edit']); // prikazuje edit formu
 Route::put('/blog/{id}/edit', [PostsController::class,'update']); // cuva azurirani post u bazu
-Route::delete('/blog/{id}',[PostsController::class,'delete']); // brise post iz baze
+Route::delete('/blog/{id}',[PostsController::class,'destroy']); // brise post iz baze
 
