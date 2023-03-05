@@ -62,7 +62,7 @@ class PostsController extends Controller
             'body' => $request->body,
             'excerpt' => $request->excerpt,
             'slug' => $request->slug,
-            'user_id' => $request->user,
+            'user_id' => Auth::id(), //izmena za autentifikovanogg usera
             'category_id' => $request->category,
         ]);
 

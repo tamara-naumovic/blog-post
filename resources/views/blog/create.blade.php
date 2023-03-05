@@ -46,7 +46,8 @@
                                 @endforeach
                                 </select>
                             </div>
-                            <div class="control-group col-12">
+                            <!-- User nam ne treba ubacicemo onog iz auth-a -->
+                            <!-- <div class="control-group col-12">
                                 <label for="user">Post User</label>
                                 <select name="user" class="form-select">
                                 @foreach ($users as $user)
@@ -55,7 +56,7 @@
                                     </option>
                                 @endforeach
                                 </select>
-                            </div>
+                            </div> -->
 
                             
                         </div>
