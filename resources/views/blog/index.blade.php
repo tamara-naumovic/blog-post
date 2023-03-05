@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.blog')
 @section('content')
     <div class="container">
         <div class="row">
@@ -10,12 +10,13 @@
                     </div>
                     <div class="col-4">
                     <p>Kreiraj novi Post</p>
+                    <!-- izmena na /blog/id da bi se prikazivao i preko /my rute -->
                     <a href="/blog/create/post" class="btn btn-primary btn-sm">Dodaj Post</a>
                     </div>
                 </div>
             @forelse($posts as $post)
                 <ul>
-                    <li><a href="./blog/{{ $post->id }}">{{ ucfirst($post->title) }}</a></li>
+                    <li><a href="/blog/{{ $post->id }}">{{ ucfirst($post->title) }}</a></li>
                 </ul>
             @empty
                 <p class="text-warning">Nema dostupnih postova</p>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.blog')
 @section('content')
     <div class="container">
         <div class="row">
@@ -12,6 +12,10 @@
 
                 <i> Category: {{$post->category->name}}</i> 
                 <hr>
+                <!-- izmena za autentifikaciju
+                dodat je if tako da korisnik ne može da edituje ili obriše tuđe
+            -->
+                @if($post->user->id == $auth_user)
                 <a href="/blog/{{ $post->id }}/edit" class="btn btn-outline-primary">Uredi Post</a>
                 <br><br>
                 <form id="delete-frm" class="" action="" method="POST">
@@ -21,6 +25,7 @@
                     @csrf
                     <button class="btn btn-danger">Obrisi Post</button>
                 </form>
+                @endif
             </div>
         </div>
     </div>
